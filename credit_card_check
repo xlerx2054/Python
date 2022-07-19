@@ -1,0 +1,12 @@
+
+def card_number(num):
+    final_num = " "
+    for i in num.split(): #split the string stored in the variable num
+        for j in num[:-4]:  # loop to hide all the numbers except last 4 digits by *
+            final_num += '*'
+        for z in num[-4:]:  #finally adding the last 4 numbers as it is
+            final_num += z
+    return final_num  #return the final string
+
+a = input("Enter the credit card number: ")
+print(card_number(a))
